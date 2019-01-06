@@ -30,7 +30,7 @@ public class SpringbootDemosApplicationTests {
 	public void simpleMail() {
 		SimpleMailMessage mail = new SimpleMailMessage();
 		mail.setFrom(mailFrom);
-		mail.setTo(new String[] {"90919@163.com", "78538@qq.com"});
+		mail.setTo(new String[] {"funing90919@163.com", "785385019@qq.com"});
 		mail.setSubject("春节放假通知");
 		mail.setText("哈哈，骗你的！--本邮件发自SpringBoot单元测试" + this.getClass());
 		mailSerder.send(mail);
@@ -43,7 +43,7 @@ public class SpringbootDemosApplicationTests {
         // 2.组装邮件
         MimeMessageHelper mail = new MimeMessageHelper(mimeMessage, true);
         mail.setFrom(mailFrom);
-        mail.setTo(new String[] {"90919@163.com", "78538@qq.com"});
+        mail.setTo(new String[] {"funing90919@163.com", "785385019@qq.com"});
         mail.setSubject("春节放假通知");
         mail.setText("<b style='color: red;'>哈哈，骗你的！</b>--本邮件发自SpringBoot单元测试" + this.getClass(), true);
         // 上传附件
