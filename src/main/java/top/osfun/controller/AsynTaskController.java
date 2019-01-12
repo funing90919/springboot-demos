@@ -1,6 +1,7 @@
 package top.osfun.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import top.osfun.task.AsynTaskServiceImpl;
@@ -19,5 +20,13 @@ public class AsynTaskController {
     public String hello() {
         service.hello();
         return "success";
+    }
+
+    @GetMapping("/ex")
+    public String ex(String a) {
+        if (StringUtils.isEmpty(a)) {
+            throw new RuntimeException("测试异常");
+        }
+        return a;
     }
 }
